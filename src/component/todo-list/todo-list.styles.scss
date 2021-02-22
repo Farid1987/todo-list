@@ -1,0 +1,32 @@
+.todo-list {
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    border-bottom: 1px solid #ddd;
+    background-color: white;
+    transition: all 0.3s;
+    &.done {
+      text-decoration: line-through;
+      .todo-list {
+        &__name {
+          opacity: 0.5;
+        }
+      }
+    }
+    &:hover {
+      background-color: rgba(#ddd, 0.5);
+    }
+  }
+  &__name {
+    padding: 15px 10px;
+    cursor: pointer;
+    flex-grow: 1;
+  }
+  &__remove {
+    padding: 0 15px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
+}
